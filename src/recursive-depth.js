@@ -1,6 +1,12 @@
 module.exports = class DepthCalculator {
-    calculateDepth(/* arr */) {
-        throw 'Not implemented';
-        // remove line with error and write your code here
+    calculateDepth( arr ) {
+       let cnt = 1;
+       let arrNew = arr.flat(Infinity);
+       arrNew.forEach((el)=>{
+           if (String(el) === "["){
+                cnt+= 1;
+           }
+       });
+        return cnt;
     }
 };
